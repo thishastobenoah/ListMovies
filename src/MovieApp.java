@@ -7,24 +7,24 @@ public class MovieApp {
 		Scanner scnr = new Scanner(System.in);
 		List<Movie> movies = new ArrayList<>();
 		movies.add(new Movie("Spider-Man: Into The Spider-verse","animated"));
-		movies.add(new Movie("Marvel's Avengers","scifi"));
-		movies.add(new Movie("Kill Bill","action"));
-		movies.add(new Movie("Beauty and the Beast","animated"));
+		movies.add(new Movie("Kill Bill","drama"));
+		movies.add(new Movie("Hereditary","horror"));
 		movies.add(new Movie("Transformers","scifi"));
-		movies.add(new Movie("Top Gun","action"));
 		movies.add(new Movie("Incredibles","animated"));
+		movies.add(new Movie("Top Gun","drama"));
+		movies.add(new Movie("Paranormal Activity","horror"));
 		movies.add(new Movie("Blade Runner","scifi"));
-		movies.add(new Movie("Jurassic Park","action"));
-		movies.add(new Movie("Treasure Planet","animated"));
+		movies.add(new Movie("Beauty and the Beast","animated"));
+		movies.add(new Movie("The Wolf of Wallstreet","drama"));
 		System.out.println("Welcome to the Movie List Application!");
 		System.out.println("");
 		System.out.println("There are 10 movies in this list.");
 		do {
 			boolean validEntry = false;
 			do {
-				System.out.print("What category are you interested in?(animated, scifi, action)");
+				System.out.print("What category are you interested in?(animated, scifi, horror, drama)");
 				String response = scnr.next();
-				if (response.equals("animated") || response.equals("scifi") || response.equals("action")){
+				if (response.equals("animated") || response.equals("scifi") || response.equals("horror")|| response.equals("drama")){
 					validEntry = true;
 					for (int i = 0; i < movies.size(); i++) {
 					if (response.equals(movies.get(i).genre)) {

@@ -24,7 +24,7 @@ public class MovieApp {
 			do {
 				System.out.print("What category are you interested in?(animated, scifi, horror, drama)");
 				String response = scnr.next();
-				if (response.equals("animated") || response.equals("scifi") || response.equals("horror")|| response.equals("drama")){
+				if (response.equals("animated|drama|horror|scifi"){
 					validEntry = true;
 					for (int i = 0; i < movies.size(); i++) {
 					if (response.equals(movies.get(i).genre)) {
